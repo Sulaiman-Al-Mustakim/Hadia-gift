@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Fajr • الفجر</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Caveat&family=Fraunces:wght@300;500&display=swap" rel="stylesheet">
+<style>
+.card:has(#fr){display:none}
+:root{color-scheme:dark;--tx:#f6f0e8;--mu:#c3bee0;--ac:#ffc27a;--gl:rgba(255,255,255,.07);--bd:rgba(255,255,255,.16);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html,body{margin:0;background:#04061a;color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+main{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:18px 16px 70px}
+.ar{font-family:Amiri,"Noto Naskh Arabic",serif;font-size:64px;text-align:center;text-shadow:0 0 34px rgba(255,194,122,.6)}
+.sub{text-align:center;color:#fff;letter-spacing:.08em;font-size:13px;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+#hero{position:relative;height:300px;margin-top:6px}#pc{width:100%;height:100%;cursor:pointer;touch-action:none}
+#bub{position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:14px;min-height:20px;text-shadow:0 1px 8px #000}
+.c{text-align:center}.note{font-size:12px;color:var(--mu);line-height:1.6;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.bar{height:6px;border-radius:6px;background:rgba(255,255,255,.14);overflow:hidden;margin:8px 30px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffd9a0,#ff7ab0);transition:width .6s}
+.pk{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:14px}
+.card{background:linear-gradient(160deg,rgba(10,12,40,.55),rgba(10,12,40,.32));border:1px solid var(--bd);border-radius:26px;padding:18px;margin-bottom:14px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 10px 40px rgba(0,0,0,.25)}
+h3{margin:0 0 10px;font:500 15px Fraunces,Georgia,serif;color:var(--ac);letter-spacing:.06em}
+.big2{font:300 64px Fraunces,Georgia,serif;text-align:center;line-height:1;text-shadow:0 0 30px rgba(255,194,122,.35)}
+button{cursor:pointer;border:0;border-radius:99px;padding:11px 18px;font:inherit;font-weight:600;color:#2a1a05;background:linear-gradient(135deg,#ffd9a0,#ff9a6b);transition:transform .15s,box-shadow .2s}
+button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,154,107,.35)}button.g{background:var(--gl);color:var(--tx);border:1px solid var(--bd)}button.sm{padding:5px 13px}
+button.on{background:linear-gradient(135deg,#bba8ff,#ff7ab0);color:#fff}
+.big{width:100%;margin-top:14px;font-size:18px;padding:15px}
+input,textarea{width:100%;padding:10px 12px;border-radius:14px;border:1px solid var(--bd);background:rgba(0,0,0,.3);color:var(--tx);font:inherit;margin-top:6px}
+.row{display:flex;gap:8px}#ch{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.fr{padding:8px 0;border-bottom:1px solid var(--bd);font-size:14px}
+#streak{font:300 40px Fraunces,Georgia,serif}#garden{font-size:24px;word-break:break-all}
+#heat{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;margin-top:10px}#heat i{aspect-ratio:1;border-radius:5px;background:rgba(255,255,255,.1)}#heat i.on{background:#ffc27a;box-shadow:0 0 8px #ffc27a88}
+.chip{display:inline-block;padding:3px 9px;margin:6px 4px 0 0;border-radius:99px;font-size:12px;background:var(--gl);border:1px solid var(--bd)}
+#night{position:fixed;inset:0;z-index:20;background:#000;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#6b6585}
+#night.on,#ov.on{display:flex}#nc{font:300 84px Fraunces,Georgia,serif;color:#3d3855}
+#ov{position:fixed;inset:0;z-index:10;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;background:rgba(5,8,22,.35);backdrop-filter:blur(2px)}
+#ov .ar{font-size:110px}
+.star{position:fixed;z-index:11;font-size:46px;background:none;border:0;padding:0;filter:drop-shadow(0 0 14px #ffc27a);animation:fl 2s ease-in-out infinite}@keyframes fl{50%{transform:scale(1.2) rotate(20deg)}}
+.rw{background:rgba(255,255,255,.12);border:1px solid var(--bd);border-radius:18px;padding:14px;max-width:420px;margin:10px auto;line-height:1.6}.rw .a{font-family:Amiri,serif;font-size:26px;direction:rtl}
+.hb{display:inline-block;animation:hbt 1.4s infinite}@keyframes hbt{50%{transform:scale(1.3)}}
+.hl{box-shadow:0 0 0 3px #ffc27a,0 0 40px rgba(255,194,122,.6)!important;transition:box-shadow .3s}#hero.hl,#tn.hl{border-radius:26px}
+#tr{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));width:min(520px,calc(100% - 24px));z-index:30;background:rgba(14,16,40,.94);border:1px solid var(--bd);border-radius:22px;padding:16px;display:none;backdrop-filter:blur(16px)}#tr.on{display:block}#tr .row{justify-content:flex-end}
+@keyframes bob{50%{transform:translateY(-12px)}}
+#lt{position:fixed;inset:0;z-index:40;background:radial-gradient(ellipse at 50% 100%,rgba(255,154,107,.35),transparent 60%),linear-gradient(#070a24,#1d2152);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .8s}#lt.off{opacity:0;pointer-events:none}#lc{position:absolute;inset:0;width:100%;height:100%}
+#env{position:relative;width:260px;height:176px;background:linear-gradient(160deg,#ffe2c4,#ffc9a0);border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 60px rgba(255,194,122,.4);cursor:pointer;animation:bob 3s ease-in-out infinite;z-index:2;transition:transform .8s,opacity .6s}
+#flap{position:absolute;left:0;top:0;width:100%;height:100px;background:linear-gradient(#ffd4ad,#f3b184);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .7s}
+#seal{position:absolute;left:50%;top:70px;transform:translateX(-50%);font-size:30px;background:#d6577a;border-radius:50%;width:54px;height:54px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.4);z-index:3}
+#env.open #flap{transform:rotateX(180deg)}#env.open{animation:none;transform:translateY(160px) scale(.6);opacity:0;pointer-events:none}
+#paper{position:absolute;left:50%;top:50%;translate:-50% -50%;z-index:3;width:min(88vw,380px);background:linear-gradient(#fffaf0,#fdecd2);color:#4a3345;border-radius:14px;padding:26px 22px;box-shadow:0 20px 60px rgba(0,0,0,.5);transform:scale(.3) translateY(80px);opacity:0;pointer-events:none;transition:all .9s cubic-bezier(.2,1.2,.3,1);font:400 25px/1.4 Caveat,cursive;text-align:center}
+#paper.show{transform:none;opacity:1}#pt{white-space:pre-wrap;min-height:230px}#lh{color:#c3bee0;z-index:2;font-size:14px;transition:opacity .4s}
+@media(max-width:420px){#paper{font-size:21px}}
+</style></head><body>
+<canvas id="sky"></canvas>
+<main>
+<div id="gt" class="c" style="font:400 28px Caveat,cursive;color:var(--ac)">a Fajr gift for you 🌙</div><div class="ar">الفجر</div><div class="sub">RISE FOR FAJR • فجر کی نماز</div><div class="c" style="margin-top:8px"><button class="g sm" id="hw">? How it works</button> <button class="g sm" id="rl">💌 Letter</button></div>
+<section id="hero"><canvas id="pc"></canvas><div id="bub"></div></section>
+<div id="lv" class="note c"></div><div class="bar"><i id="bf"></i></div>
+<div class="pk"><button class="g sm" id="p1">‹</button><span class="note" id="pkl">your butterfly</span><button class="g sm" id="p2">›</button></div>
+<div class="card" id="tcard"><h3>TONIGHT</h3><div class="big2" id="fj">--:--</div><div class="note c" id="fs"></div>
+<div class="note c" id="bd2" style="margin-top:8px"></div><div class="note c" id="pn"></div>
+<button class="big" id="gn">🌙 Good night</button><button class="g big" id="ts" style="margin-top:8px;font-size:14px;padding:10px">⏱ Test the alarm (rings in 1 minute)</button>
+<div class="note c" style="margin-top:8px">Tap once when you go to bed. I count your sleep cycles and wake you at the lightest moment before Fajr.</div></div>
+<div class="card" id="mcard"><h3>MUSIC • TOUCH THE SKY TOO</h3><div id="ch"></div><button class="g" id="pm">▶ Play</button></div>
+<div class="card"><h3>GIFT NOTE 🎁</h3><div class="row"><input id="fr" value="Mustakim" placeholder="From"><input id="to" value="Hadiya" placeholder="Her name"></div><textarea id="ms" rows="3" placeholder="A message">May every Fajr bring you light, peace and a reason to smile.</textarea></div>
+<div class="card" id="gcard"><h3>GARDEN</h3><div><span id="streak">0</span> <span class="note" id="stn"></span></div><div id="garden"></div><div id="heat"></div><div id="bdg"></div></div>
+<div class="card c"><div id="dn" style="font:400 30px Caveat,cursive;color:var(--ac)">Dear friend,</div><div style="font:400 23px Caveat,cursive;line-height:1.5;margin:8px 0">may your mornings be full of light<br>and your days full of barakah. 🌸<br>Every flower in this garden is a Fajr you woke up for.</div><div style="font:400 32px Caveat,cursive">from your friend, Mustakim 🦋</div></div>
+<p class="note c" id="tn">Keep this tab open, Mac plugged in, sleep off, volume up. Turn the screen brightness down; night mode goes black.<br>শুভকামনা • اللہ آسان کرے</p>
+</main>
+<div id="lt"><canvas id="lc"></canvas><div id="env"><div id="flap"></div><div id="seal">🦋</div></div><div id="paper"><div id="pt"></div></div><div id="lh">tap the envelope ✨</div><button id="lb" style="display:none;position:absolute;bottom:calc(8vh + env(safe-area-inset-bottom,0px));z-index:4">Open my gift ✨</button></div>
+<div id="tr"><div class="note" id="tdt"></div><h3 id="th" style="margin:4px 0"></h3><div id="tt" style="line-height:1.5;margin-bottom:12px"></div><div class="row"><button class="g sm" id="tb">Back</button><button class="g sm" id="tk2">Skip</button><button class="sm" id="tn2">Next</button></div></div>
+<div id="night"><div id="nc">--:--</div><div id="nw"></div><div id="ns" style="margin-top:6px"></div><button class="g" id="nx" style="margin-top:40px;opacity:.5">Cancel</button></div>
+<div id="ov"><div class="ar">الفجر</div><h2>Rise for Fajr • اٹھو</h2><p id="og" style="max-width:420px;color:var(--mu)"></p><div id="ot">Catch the 5 stars ⭐</div></div>
+<script>
+const $=id=>document.getElementById(id),pick=a=>a[Math.floor(Math.random()*a.length)],R=Math.PI/180,lerp=(a,b,t)=>a.map((v,i)=>Math.round(v+(b[i]-v)*t));
+let S={};try{S=JSON.parse(localStorage.getItem('fj2')||'{}')}catch(e){}S.days=S.days||[];
+const save=()=>{try{localStorage.setItem('fj2',JSON.stringify(S))}catch(e){}};
+const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'),hm=d=>d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}),days=()=>[...new Set(S.days)].sort();
+/* ---- prayer times from location (no internet needed) ---- */
+function sunT(dt,lat,lng){const jd=Date.UTC(dt.getFullYear(),dt.getMonth(),dt.getDate())/864e5+2440587.5-lng/360,D=jd-2451545,g=(357.529+.98560028*D)%360,q=((280.459+.98564736*D)%360+360)%360,L=q+1.915*Math.sin(g*R)+.02*Math.sin(2*g*R),e=23.439-3.6e-7*D;
+ let ra=Math.atan2(Math.cos(e*R)*Math.sin(L*R),Math.cos(L*R))/R/15;ra=(ra+24)%24;let eq=q/15-ra;eq=((eq+12)%24+24)%24-12;
+ const dec=Math.asin(Math.sin(e*R)*Math.sin(L*R)),mid=12-eq,tz=-dt.getTimezoneOffset()/60,m0=new Date(dt).setHours(0,0,0,0);
+ const at=(a,s)=>{const x=(-Math.sin(a*R)-Math.sin(dec)*Math.sin(lat*R))/(Math.cos(dec)*Math.cos(lat*R));if(Math.abs(x)>1)return null;return new Date(m0+(mid+s*Math.acos(x)/R/15+tz-lng/15)*36e5)};
+ return{fajr:at(18,-1),rise:at(.833,-1),set:at(.833,1)}}
+const loc=()=>S.loc||(Intl.DateTimeFormat().resolvedOptions().timeZone==='Asia/Dhaka'?[23.81,90.41]:[21.42,39.83]);
+function T(o=0){const d=new Date();d.setDate(d.getDate()+o);const[a,b]=loc();return sunT(d,a,b)}
+function nextFajr(){const a=T().fajr,b=T(1).fajr;return a&&a>new Date()?a:(b||new Date(Date.now()+864e5))}
+if(!S.loc&&navigator.geolocation)try{navigator.geolocation.getCurrentPosition(p=>{S.loc=[p.coords.latitude,p.coords.longitude];save();ui()},()=>{},{timeout:8000})}catch(e){}
+/* ---- sleep-cycle planner ---- */
+function plan(on){const f=nextFajr(),lim=+f-5*6e4;let w=null,k=0;for(let i=3;i<=8;i++){const t=+on+i*5.4e6;if(t<=lim){w=t;k=i}}
+ if(w==null||lim-w>45*6e4){w=+f-12*6e4;k=0}return{f,wake:new Date(w),k,hrs:(w-on)/36e5}}
+function ui(){const f=nextFajr(),t=T(),p=plan(new Date(Date.now()+14*6e4)),bed=new Date(+f-12*6e4-5*5.4e6-14*6e4);
+ $('fj').textContent=hm(f);$('fs').textContent='Fajr'+(t.rise?' • sunrise '+hm(t.rise):'')+' • 📍 '+(S.loc?'your location':'default location');
+ $('bd2').textContent='Best time to be in bed: '+hm(bed)+' (5 sleep cycles)';
+ $('pn').textContent='Sleep now → wake '+hm(p.wake)+' • '+p.hrs.toFixed(1)+'h'+(p.hrs<6?' ⚠ short, try earlier':'')}
+/* ---- audio engine: generative maqam music ---- */
+let ac,out,mus=0,scn='auto',nxt=0,stp=0,idx=3,SN=[],lastK='',safe=[],Pc=.1,Po=null;
+function ctx(){if(!ac){ac=new(window.AudioContext||window.webkitAudioContext)();const cp=ac.createDynamicsCompressor(),wet=ac.createConvolver(),wg=ac.createGain(),dl=ac.createDelay(1),fb=ac.createGain();out=ac.createGain();out.gain.value=.8;
+ const n=ac.sampleRate*3.5,b=ac.createBuffer(2,n,ac.sampleRate);for(let c=0;c<2;c++){const d=b.getChannelData(c);for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,2.6)}
+ wet.buffer=b;wg.gain.value=.55;dl.delayTime.value=.42;fb.gain.value=.35;out.connect(cp);out.connect(wet);wet.connect(wg);wg.connect(cp);out.connect(dl);dl.connect(fb);fb.connect(dl);dl.connect(wg);cp.connect(ac.destination)}
+ if(ac.state!=='running')ac.resume();return ac}
+function tone(f,t,d,v,ty='sine',f2){const o=ac.createOscillator(),g=ac.createGain();o.type=ty;o.frequency.setValueAtTime(f,t);if(f2)o.frequency.exponentialRampToValueAtTime(f2,t+d*.7);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.015);g.gain.exponentialRampToValueAtTime(.0003,t+d);o.connect(g);g.connect(out);o.start(t);o.stop(t+d+.05)}
+function bell(f,t,v=.1){[1,2.76,5.4].forEach((m,i)=>tone(f*m,t,3.2/(i+1),v/(i+1)))}
+function pluck(f,t,v=.17){const o=ac.createOscillator(),fl=ac.createBiquadFilter(),g=ac.createGain();o.type='sawtooth';o.frequency.value=f;fl.type='lowpass';fl.frequency.setValueAtTime(f*6,t);fl.frequency.exponentialRampToValueAtTime(f*1.2,t+.5);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.01);g.gain.exponentialRampToValueAtTime(.0005,t+1.6);o.connect(fl);fl.connect(g);g.connect(out);o.start(t);o.stop(t+1.7)}
+function pad(f,t,d,v){[-5,5].forEach(c=>{const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;o.detune.value=c;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+d*.4);g.gain.linearRampToValueAtTime(0,t+d);o.connect(g);g.connect(out);o.start(t);o.stop(t+d+.1)})}
+function bird(t){const b=2400+Math.random()*1600;for(let i=0;i<2+Math.floor(Math.random()*3);i++)tone(b+Math.random()*300,t+i*.11,.09,.08,'sine',b*1.35)}
+function waves(){const b=ac.createBuffer(1,ac.sampleRate*2,ac.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;const s=ac.createBufferSource();s.buffer=b;s.loop=true;const f=ac.createBiquadFilter();f.type='lowpass';f.frequency.value=600;const g=ac.createGain();g.gain.value=.12;const l=ac.createOscillator(),lg=ac.createGain();l.frequency.value=.1;lg.gain.value=.1;l.connect(lg);lg.connect(g.gain);s.connect(f);f.connect(g);g.connect(out);s.start();l.start();SN.push(s,l)}
+const SCN={night:{r:146.8,sc:[0,1.5,3,5,7,8,10],sp:1.9,pr:.45},dawn:{r:293.7,sc:[0,1,4,5,7,8,10],sp:.42,pr:.85},garden:{r:349.2,sc:[0,2,4,7,9],sp:.9,pr:.55},ocean:{r:196,sc:[0,2,3,5,7,9,10],sp:1.4,pr:.4}};
+const nf=(s,i,o=0)=>{const n=s.sc.length,oc=Math.floor(i/n),d=((i%n)+n)%n;return s.r*Math.pow(2,(s.sc[d]+12*(oc+o))/12)};
+const cs=()=>scn==='auto'?(Pc<.28?'night':Pc<.65?'dawn':'garden'):scn;
+function beat(t){const k=cs(),s=SCN[k];if(k!==lastK){lastK=k;SN.forEach(n=>{try{n.stop()}catch(e){}});SN=[];if(k==='ocean')waves()}
+ if(stp%(k==='dawn'?32:8)===0)[0,2,4].forEach(j=>pad(nf(s,j,-1),t,k==='dawn'?13:11,.05));
+ idx=Math.max(-2,Math.min(9,idx+pick([-2,-1,-1,0,1,1,2])));
+ if(Math.random()<s.pr)pluck(k==='dawn'?nf(s,stp%8,0):nf(s,idx,0),t);
+ if(Math.random()<.22)bell(nf(s,idx+pick([0,2,4]),1),t+.05);
+ if((k==='dawn'||k==='garden')&&Math.random()<.18)bird(t);stp++}
+setInterval(()=>{if(!mus||!ac)return;const n=ac.currentTime;if(nxt<n)nxt=n+.05;while(nxt<n+.8){beat(nxt);nxt+=SCN[cs()].sp*(.8+Math.random()*.5)}},150);
+function startMus(v=.8,r=2){ctx();mus=1;const t=ac.currentTime;out.gain.cancelScheduledValues(t);out.gain.setValueAtTime(Math.max(out.gain.value,.0001),t);out.gain.linearRampToValueAtTime(v,t+r)}
+function stopMus(){mus=0;if(ac){const t=ac.currentTime;out.gain.cancelScheduledValues(t);out.gain.setValueAtTime(out.gain.value,t);out.gain.linearRampToValueAtTime(.0001,t+.8);SN.forEach(n=>{try{n.stop()}catch(e){}});SN=[];lastK=''}}
+function touchNote(X,Y){ctx();if(!mus&&out.gain.value<.5)out.gain.value=.8;const s=SCN[cs()],i=Math.floor(X/W*8)+Math.floor((1-Y/H)*4),t=ac.currentTime;pluck(nf(s,i,0),t,.2);bell(nf(s,i+2,1),t+.05,.08);rp.push({x:X,y:Y,l:1})}
+/* safety net: swell scheduled on the audio clock, works even if the tab's timers are throttled */
+function killSafe(){safe.forEach(n=>{try{n.stop?n.stop():n.disconnect()}catch(e){}});safe=[]}
+function safety(){killSafe();ctx();const t=ac.currentTime+(S.wake-Date.now())/1e3,g=ac.createGain();g.gain.setValueAtTime(0,ac.currentTime);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.2,t+60);g.connect(ac.destination);safe=[g];[293.7,370,440,587].forEach(f=>{const o=ac.createOscillator();o.frequency.value=f;o.connect(g);o.start(t);o.stop(t+900);safe.push(o)})}
+/* ---- sky scene ---- */
+const cv=$('sky'),x=cv.getContext('2d');let W,H,st=[],ff=[],rp=[],ss=[],mx=.5,my=.5;
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;st=Array.from({length:170},()=>({x:Math.random()*W,y:Math.random()*H*.75,r:Math.random()*1.5+.3,d:Math.random()*.05+.01,t:Math.random()*6}));ff=Array.from({length:36},()=>({x:Math.random()*W,y:H*(.5+Math.random()*.5),a:Math.random()*6,s:Math.random()*.4+.2}));prs()}
+const NI=[[4,6,20],[22,26,66]],DA=[[70,62,128],[255,150,100]],DY=[[40,92,175],[120,175,225]];
+const skyC=P=>P<.6?[lerp(NI[0],DA[0],P/.6),lerp(NI[1],DA[1],P/.6)]:[lerp(DA[0],DY[0],(P-.6)/.4),lerp(DA[1],DY[1],(P-.6)/.4)];
+function skyP(){const n=Date.now(),t=T();if(!t.fajr||!t.rise||!t.set)return .1;const fa=+t.fajr,ri=+t.rise,se=+t.set,h=36e5;
+ if(n<fa-h/2)return 0;if(n<fa)return .25*(n-(fa-h/2))/(h/2);if(n<ri)return .25+.45*(n-fa)/(ri-fa);if(n<ri+1.5*h)return .7+.3*(n-ri)/(1.5*h);if(n<se-1.5*h)return 1;if(n<se)return 1-.4*(n-(se-1.5*h))/(1.5*h);if(n<se+h)return .6*(1-(n-se)/h);return 0}
+let night=0;
+function draw(ts){requestAnimationFrame(draw);if(night)return;Pc+=((Po!=null?Po:skyP())-Pc)*.02;const P=Pc,[a,b]=skyC(P),g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,`rgb(${a})`);g.addColorStop(1,`rgb(${b})`);x.fillStyle=g;x.fillRect(0,0,W,H);
+ const sa=Math.max(0,1-P*1.6);st.forEach(s=>{x.globalAlpha=sa*(.35+.65*(.5+.5*Math.sin(ts/700+s.t)));x.fillStyle='#fff';x.beginPath();x.arc(s.x-(mx-.5)*s.d*300,s.y-(my-.5)*s.d*300,s.r,0,7);x.fill()});
+ x.globalAlpha=1;if(sa>0){x.globalCompositeOperation='lighter';for(let i=0;i<3;i++){const gr=x.createLinearGradient(0,H*.1,0,H*.5),c=['80,255,190','150,110,255','90,200,255'][i];gr.addColorStop(0,`rgba(${c},0)`);gr.addColorStop(.5,`rgba(${c},${.16*sa})`);gr.addColorStop(1,`rgba(${c},0)`);x.fillStyle=gr;x.beginPath();x.moveTo(0,H*.5);for(let X=0;X<=W;X+=30)x.lineTo(X,H*(.28+.07*i)+Math.sin(X/190+ts/2600+i*2)*H*.07+Math.sin(X/70+ts/1500)*H*.015);x.lineTo(W,H*.5);x.fill()}x.globalCompositeOperation='source-over'}
+ x.globalAlpha=Math.max(0,1-P*2);x.fillStyle='#f6efe0';x.shadowColor='#fff4d0';x.shadowBlur=40;x.beginPath();x.arc(W*.78,H*.17,24,0,7);x.fill();x.shadowBlur=0;x.globalAlpha=1;
+ const sy=H*(.78-Math.min(1,P*1.2)*.5),sg=x.createRadialGradient(W*.3,sy,5,W*.3,sy,H*.5);sg.addColorStop(0,`rgba(255,220,150,${Math.min(.9,P*1.3)})`);sg.addColorStop(1,'rgba(255,200,120,0)');x.fillStyle=sg;x.fillRect(0,0,W,H);x.fillStyle=`rgba(255,240,200,${Math.min(1,P*1.5)})`;x.beginPath();x.arc(W*.3,sy,30,0,7);x.fill();
+ for(let i=0;i<3;i++){const k=[.34,.22,.12][i],c=b.map((v,j)=>Math.round(v*k+[2,4,10][j]*(1-P)));x.fillStyle=`rgb(${c})`;x.beginPath();x.moveTo(0,H);const o=(mx-.5)*[10,22,40][i],y0=H*[.7,.78,.86][i];for(let X=0;X<=W+20;X+=20)x.lineTo(X,y0+Math.sin((X+o)/(160-i*30)+i*1.7)*H*.04+Math.sin((X+o)/(60+i*10))*H*.01);x.lineTo(W,H);x.fill()}
+ const fa=Math.max(0,1-P*1.2);ff.forEach(f=>{f.a+=.01*f.s;f.x+=Math.cos(f.a)*f.s+(mx*W-f.x)*.0003;f.y+=Math.sin(f.a*1.3)*f.s*.5;if(f.y<H*.4)f.y=H*.9;x.globalAlpha=fa*(.4+.6*Math.sin(ts/400+f.a*5)**2);x.fillStyle='#d8ff9a';x.shadowColor='#d8ff9a';x.shadowBlur=12;x.beginPath();x.arc(f.x,f.y,2.2,0,7);x.fill()});x.shadowBlur=0;x.globalAlpha=1;
+ rp=rp.filter(r=>r.l>0);rp.forEach(r=>{x.strokeStyle=`rgba(255,226,170,${r.l})`;x.lineWidth=2;x.beginPath();x.arc(r.x,r.y,(1-r.l)*140,0,7);x.stroke();r.l-=.018});
+ if(Math.random()<.003)ss.push({x:Math.random()*W*.8,y:Math.random()*H*.3,l:1});ss=ss.filter(s=>s.l>0);ss.forEach(s=>{x.strokeStyle=`rgba(255,240,210,${s.l*sa})`;x.lineWidth=2;x.beginPath();x.moveTo(s.x,s.y);x.lineTo(s.x-70*s.l,s.y-35*s.l);x.stroke();s.x+=9;s.y+=4.5;s.l-=.025});fxM(ts,W,H)}
+addEventListener('pointermove',e=>{mx=e.clientX/W;my=e.clientY/H});
+addEventListener('pointerdown',e=>{ctx();if(e.target.closest('button,input,textarea,#pc'))return;touchNote(e.clientX,e.clientY)});
+/* ---- the butterfly (egg → caterpillar → chrysalis → 4 butterflies) ---- */
+const pc=$('pc'),p=pc.getContext('2d');let PW,PH,bx=0,by=0,px=.5,py=.45,wob=0,sp=[],peek=null,evo=null;
+function prs(){PW=pc.width=pc.clientWidth;PH=pc.height=pc.clientHeight;bx=PW/2;by=PH/2}
+const SG=[[0,'Pearl Egg'],[1,'Baby Butterfly'],[3,'Blue Morpho'],[7,'Flower-Crown Monarch'],[14,'Dragonfly Fairy'],[30,'Dawn Songbird'],[60,'Moon Spirit'],[100,'Celestial Butterfly']];
+const sgOf=n=>{let i=0;SG.forEach((s,k)=>{if(n>=s[0])i=k});return i};
+function leaf(){p.fillStyle='#2f7d57';p.beginPath();p.moveTo(PW*.15,PH*.8);p.quadraticCurveTo(PW/2,PH*.55,PW*.85,PH*.8);p.quadraticCurveTo(PW/2,PH*.97,PW*.15,PH*.8);p.fill();p.strokeStyle='#5fc08a';p.lineWidth=2;p.beginPath();p.moveTo(PW*.18,PH*.8);p.quadraticCurveTo(PW/2,PH*.76,PW*.82,PH*.8);p.stroke()}
+let ox=0,oy=0,tx=0,ty=0;function mv(ts){tx=px*PW;ty=py*PH;bx+=(tx-bx)*.04;by+=(ty-by)*.04;ox=Math.sin(ts/900)*20;oy=Math.sin(ts/600)*12}
+function face(y,r,nb){if(!nb){p.fillStyle='#fff3e8';p.beginPath();p.arc(0,y,r,0,7);p.fill()}p.fillStyle='#2a1a2e';[-1,1].forEach(s=>{p.beginPath();p.arc(s*r*.38,y-r*.05,r*.17,0,7);p.fill();p.fillStyle='#fff';p.beginPath();p.arc(s*r*.38+1,y-r*.12,r*.06,0,7);p.fill();p.fillStyle='#2a1a2e'});p.fillStyle='rgba(255,120,150,.55)';[-1,1].forEach(s=>{p.beginPath();p.arc(s*r*.62,y+r*.28,r*.17,0,7);p.fill()});p.strokeStyle='#2a1a2e';p.lineWidth=1.5;p.beginPath();p.arc(0,y+r*.2,r*.2,.2,2.9);p.stroke()}
+function crown(y,r){['#ff7ab0','#ffd166','#fff','#8affc8','#ff7ab0'].forEach((c,i)=>{const a=-Math.PI+.5+i*.55;p.fillStyle=c;p.beginPath();p.arc(Math.cos(a)*r*1.05,y+Math.sin(a)*r*1.05,3.6,0,7);p.fill()})}
+function moon(y){p.fillStyle='#ffe27a';p.shadowColor='#ffd166';p.shadowBlur=14;p.beginPath();p.arc(0,y,10,-1.3,1.3);p.arc(4,y,8,1.1,-1.1,true);p.closePath();p.fill();p.shadowBlur=0}
+function egg(ts){leaf();p.save();p.translate(PW/2,PH*.7+Math.sin(ts/600)*3);p.rotate(Math.sin(ts/70)*wob*.25);wob*=.95;const h=ts/40%360,g=p.createRadialGradient(-12,-40,4,0,-30,50);g.addColorStop(0,'#fff');g.addColorStop(.5,`hsl(${h},60%,86%)`);g.addColorStop(1,`hsl(${(h+90)%360},60%,70%)`);p.fillStyle=g;p.shadowColor='#fff';p.shadowBlur=26;p.beginPath();p.ellipse(0,-30,34,46,0,0,7);p.fill();p.shadowBlur=0;p.strokeStyle='#8a6a8a';p.lineWidth=2;[-12,12].forEach(X=>{p.beginPath();p.arc(X,-30,5,.2,2.9);p.stroke()});p.fillStyle='rgba(255,120,150,.4)';[-20,20].forEach(X=>{p.beginPath();p.arc(X,-20,5,0,7);p.fill()});p.beginPath();p.arc(0,-24,4,.2,2.9);p.stroke();p.restore();if(Math.random()<.04)sp.push({x:PW/2+(Math.random()-.5)*100,y:PH*.7-Math.random()*100,vx:0,vy:-.5,l:1})}
+function wing(sx,c,sc,f){p.save();p.scale(sx*f,1);const g=p.createLinearGradient(0,0,90*sc,0);g.addColorStop(0,c[0]);g.addColorStop(1,c[1]);p.fillStyle=g;p.strokeStyle=c[2];p.lineWidth=3;p.beginPath();p.moveTo(4,-4);p.bezierCurveTo(40*sc,-110*sc,150*sc,-90*sc,115*sc,-12*sc);p.bezierCurveTo(100*sc,10*sc,40*sc,6*sc,4,0);p.fill();p.stroke();p.beginPath();p.moveTo(4,2);p.bezierCurveTo(60*sc,10*sc,110*sc,40*sc,80*sc,85*sc);p.bezierCurveTo(50*sc,100*sc,10*sc,50*sc,4,8);p.fill();p.stroke();p.fillStyle='rgba(255,255,255,.75)';[[95,-40],[70,60],[110,-14]].forEach(q=>{p.beginPath();p.arc(q[0]*sc,q[1]*sc,5*sc,0,7);p.fill()});p.restore()}
+const FM={1:{c:['#ffb3d1','#fff0c8','#d6578a'],s:.42},2:{c:['#1d6bff','#7fe0ff','#0a1a4a'],s:.62},3:{c:['#ff8a1c','#ffd24a','#1a1208'],s:.7,cr:1},7:{rb:1,s:.78,mn:1}};
+function bfly(ts,si){const m=FM[si];let c=m.c;if(m.rb){const h=ts/12%360;c=[`hsl(${h},90%,65%)`,`hsl(${(h+80)%360},95%,75%)`,'#fff']}
+ mv(ts);p.save();p.translate(bx+ox,by+oy);p.rotate((tx-bx)*.0015);const f=.25+.75*Math.abs(Math.sin(ts/130));p.shadowColor=c[1];p.shadowBlur=26;wing(1,c,m.s,f);wing(-1,c,m.s,f);p.shadowBlur=0;
+ const k=Math.max(m.s/.7,.9);p.scale(k,k);p.fillStyle='#3a2742';p.beginPath();p.ellipse(0,0,5,20,0,0,7);p.fill();p.strokeStyle='#3a2742';p.lineWidth=2;p.beginPath();p.moveTo(-4,-30);p.quadraticCurveTo(-12,-50,-20,-46);p.moveTo(4,-30);p.quadraticCurveTo(12,-50,20,-46);p.stroke();face(-24,10);if(m.cr)crown(-24,10);if(m.mn)moon(-46);p.restore();
+ if((m.rb||Math.random()<.15)&&Math.random()<.5)sp.push({x:bx+ox,y:by+oy,vx:Math.random()*2-1,vy:Math.random()*2,l:1})}
+function dfly(ts){mv(ts);p.save();p.translate(bx+ox,by+oy);p.rotate((tx-bx)*.0015);const f=.3+.7*Math.abs(Math.sin(ts/60));p.shadowColor='#8affff';p.shadowBlur=20;p.fillStyle='rgba(160,240,255,.55)';p.strokeStyle='#5fd0e8';p.lineWidth=1.5;[[-1,-14],[1,-14],[-1,4],[1,4]].forEach(([s,y])=>{p.save();p.translate(0,y);p.scale(s*f,1);p.beginPath();p.ellipse(42,0,44,9,0,0,7);p.fill();p.stroke();p.restore()});p.shadowBlur=0;p.fillStyle='#38c6a8';p.beginPath();p.ellipse(0,10,5,34,0,0,7);p.fill();face(-30,11);crown(-30,11);p.restore()}
+function bird(ts){mv(ts);p.save();p.translate(bx+ox,by+oy);p.rotate((tx-bx)*.002);const f=Math.sin(ts/130);p.fillStyle='#ffb347';p.beginPath();p.ellipse(-30,8,24,12,f*.6-.4,0,7);p.fill();p.fillStyle='#ffd166';p.shadowColor='#ffd166';p.shadowBlur=24;p.beginPath();p.ellipse(0,6,36,30,0,0,7);p.fill();p.shadowBlur=0;p.fillStyle='#ffb347';p.beginPath();p.ellipse(-12,12,18,10,f*.5,0,7);p.fill();p.fillStyle='#ff8a4c';p.beginPath();p.moveTo(30,0);p.lineTo(48,6);p.lineTo(30,12);p.fill();p.save();p.translate(6,0);face(0,15,1);p.restore();p.fillStyle='#ff7ab0';p.beginPath();p.arc(-2,-30,5,0,7);p.arc(8,-33,4,0,7);p.fill();p.restore()}
+function spirit(ts){mv(ts);p.save();p.translate(bx+ox,by+oy);const c=['#fff','#d9ccff','#9a86e0'],f=.3+.7*Math.abs(Math.sin(ts/200));p.shadowColor='#c8b8ff';p.shadowBlur=30;wing(1,c,.4,f);wing(-1,c,.4,f);const g=p.createRadialGradient(0,-6,4,0,0,42);g.addColorStop(0,'#fff');g.addColorStop(1,'#b9a6ff');p.fillStyle=g;p.beginPath();p.arc(0,0,38,0,7);p.fill();p.shadowBlur=0;face(2,22,1);moon(-54);for(let i=0;i<3;i++){const a=ts/700+i*2.1;p.fillStyle='#ffe9a8';p.beginPath();p.arc(Math.cos(a)*62,Math.sin(a)*20-4,3.5,0,7);p.fill()}p.restore()}
+function pframe(ts){requestAnimationFrame(pframe);p.clearRect(0,0,PW,PH);let si=peek!=null?peek:sgOf(days().length),fa=0;
+ if(evo){const e=ts-evo.s;if(e<1300){si=evo.f;wob=Math.max(wob,.7)}else{si=evo.t;if(!evo.b){evo.b=1;for(let i=0;i<70;i++){const a=Math.random()*6.28,v=2+Math.random()*7;sp.push({x:PW/2,y:PH*.6,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1})}}}
+  if(e>1000&&e<1700)fa=1-Math.abs(e-1350)/350;if(e>2800)evo=null}
+ [egg,bfly,bfly,bfly,dfly,bird,spirit,bfly][si](ts,si);if(fa>0){p.fillStyle=`rgba(255,255,255,${fa})`;p.fillRect(0,0,PW,PH)}
+ sp=sp.filter(s=>s.l>0);sp.forEach(s=>{p.globalAlpha=s.l;p.fillStyle='#ffe9a8';p.shadowColor='#ffd166';p.shadowBlur=10;p.beginPath();p.arc(s.x,s.y,2.5*s.l+.5,0,7);p.fill();s.x+=s.vx;s.y+=s.vy;s.l-=.02});p.globalAlpha=1;p.shadowBlur=0}
+const PH2=['Good morning! صبح بخیر','Bismillah ✨','You are doing great 🌸','اللہ آپ کو خوش رکھے','Sunlight in the morning helps your body clock ☀️','শুভকামনা 🤍','Same wake time daily = better sleep','Water first, then wudu 💧'];
+const say=t=>{$('bub').textContent=t};
+pc.addEventListener('pointermove',e=>{const r=pc.getBoundingClientRect();px=(e.clientX-r.left)/r.width;py=(e.clientY-r.top)/r.height});
+pc.addEventListener('pointerleave',()=>{px=.5;py=.45});
+pc.addEventListener('pointerdown',e=>{ctx();if(!mus&&out.gain.value<.5)out.gain.value=.8;const t=ac.currentTime,s=SCN[cs()];bell(nf(s,Math.floor(Math.random()*7),1),t,.12);wob=1;for(let i=0;i<14;i++)sp.push({x:bx,y:by,vx:Math.random()*6-3,vy:Math.random()*6-3,l:1});say(days().length?pick(PH2):'Wake up for Fajr once and I will hatch 🥚')});
+setInterval(()=>{if(!ringing)say(days().length?pick(PH2):'Tap me! I hatch after your first Fajr 🥚')},12000);
+const pk=d=>{const o=peek!=null?peek:sgOf(days().length),n=Math.max(0,Math.min(7,o+d));if(n===o)return;peek=n;evo={s:performance.now(),f:o,t:n,b:0};dr()};$('p1').onclick=()=>pk(-1);$('p2').onclick=()=>pk(1);$('pkl').style.cursor='pointer';$('pkl').onclick=()=>{peek=null;dr()};
+/* ---- garden / streak ---- */
+function dr(){const ds=days(),n=ds.length;let st=0,gap=0;const c=new Date();for(let i=0;i<400;i++){if(ds.includes(iso(c))){st++;gap=0}else{gap++;if(gap>1)break}c.setDate(c.getDate()-1)}
+ $('streak').textContent=st;$('stn').textContent='day streak • '+n+' mornings total (never resets)';
+ $('garden').textContent=ds.slice(-60).map((d,i)=>['🌸','🌷','🌼','🌺','🌻','🪻'][i%6]).join('')+'🌟'.repeat(S.gold||0)||'Your first flower grows after your first Fajr 🌱';
+ let h='';for(let i=27;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);h+='<i class="'+(ds.includes(iso(d))?'on':'')+'"></i>'}$('heat').innerHTML=h;
+ $('bdg').innerHTML=[1,3,7,14,30,100].filter(m=>n>=m).map(m=>'<span class="chip">🏅 '+m+'</span>').join('');
+ const si=sgOf(n),nx=SG[si+1];$('lv').textContent=SG[si][1]+(nx?' • '+(nx[0]-n)+' more mornings to transform':' • fully transformed ✨');$('bf').style.width=(nx?(n-SG[si][0])/(nx[0]-SG[si][0])*100:100)+'%';
+ $('pkl').textContent=peek!=null?'preview: '+SG[peek][1]:'your butterfly'}
+/* ---- music UI ---- */
+[['auto','Auto (follows the sky)'],['night','Night'],['dawn','Dawn'],['garden','Garden'],['ocean','Ocean']].forEach(([k,l])=>{const b=document.createElement('button');b.className='g'+(k===scn?' on':'');b.textContent=l;b.onclick=()=>{scn=k;lastK='';[...$('ch').children].forEach(c=>c.classList.remove('on'));b.classList.add('on')};$('ch').appendChild(b)});
+$('pm').onclick=()=>{if(mus){stopMus();$('pm').textContent='▶ Play'}else{startMus(.8,3);$('pm').textContent='⏸ Pause'}};
+/* ---- sleep, alarm, night mode ---- */
+let ringing=false,wl=null,la=Date.now();['pointermove','keydown','pointerdown'].forEach(ev=>addEventListener(ev,()=>la=Date.now()));
+function showNight(p){$('nw').textContent='Wake at '+hm(p.wake)+' • Fajr '+hm(p.f);$('ns').textContent=p.hrs.toFixed(1)+'h of sleep'+(p.k?' • '+p.k+' cycles':' • mid-cycle (sleep was late)')+(p.hrs<6?' ⚠':'');night=1;$('night').classList.add('on')}
+function arm(on,auto){S.testRun=0;const p=plan(on);S.wake=+p.wake;S.armed=1;save();safety();showNight(p);if(!auto)say('')}
+$('gn').onclick=async()=>{ctx();stopMus();$('pm').textContent='▶ Play';arm(new Date(Date.now()+14*6e4));try{if(navigator.wakeLock)wl=await navigator.wakeLock.request('screen')}catch(e){}};
+$('nx').onclick=()=>{S.armed=0;save();killSafe();night=0;$('night').classList.remove('on');try{wl&&wl.release()}catch(e){}};
+const tk=()=>{const n=new Date();$('nc').textContent=hm(n);
+ if(S.armed&&!ringing&&+n>=S.wake){if(+n-S.wake>36e5){S.armed=0;save()}else ring()}
+ if(!S.armed&&!ringing&&+n-la>20*6e4){const h=n.getHours();if(h>=21||h<4)arm(new Date(la+14*6e4),1)}};
+try{const w=new Worker(URL.createObjectURL(new Blob(['setInterval(()=>postMessage(1),1000)'])));w.onmessage=tk}catch(e){setInterval(tk,1000)}
+setInterval(tk,5000);setInterval(ui,30000);
+const DU=[['الحمد لله الذي أحيانا بعد ما أماتنا وإليه النشور','Praise to Allah who gave us life after death, and to Him is the return.'],['سبحان الله وبحمده','Glory and praise to Allah.'],['لا حول ولا قوة إلا بالله','There is no power or strength except with Allah.'],['رب زدني علما','My Lord, increase me in knowledge.'],['أستغفر الله','I seek forgiveness from Allah.']];
+const TP=['Get 10 minutes of daylight. Morning light helps set your body clock.','Drink a glass of water. You lost some overnight.','Waking at the same time daily improves sleep quality more than one long lie-in.','Put your phone away 30 to 60 minutes before bed tonight.','Late caffeine can hurt tonight’s sleep. Try to stop by early afternoon.'];
+function ring(){ringing=true;S.armed=0;save();killSafe();night=0;$('night').classList.remove('on');try{wl&&wl.release()}catch(e){}
+ scn='dawn';lastK='';startMus(.9,60);Po=.5;const f=$('fr').value.trim(),t=$('to').value.trim(),m=$('ms').value.trim();
+ $('og').textContent=[t?'Good morning, '+t+'.':'',m,f?'— from '+f:''].filter(Boolean).join(' ');$('ov').classList.add('on');$('ot').textContent='Catch the 5 stars to wake up ⭐';
+ let left=5;const dw=setInterval(()=>{Po=Math.min(1,Po+.01)},500);
+ const spawn=()=>{const b=document.createElement('button');b.className='star';b.textContent='⭐';b.style.left=(8+Math.random()*80)+'vw';b.style.top=(12+Math.random()*70)+'vh';b.onclick=()=>{b.remove();left--;touchNote(innerWidth/2,innerHeight/3);if(left>0){$('ot').textContent=left+' stars left ⭐';spawn()}else done()};document.body.appendChild(b)};
+ const done=()=>{clearInterval(dw);stopMus();Po=null;const d=iso(new Date()),pre=sgOf(days().length);if(!S.testRun&&!S.days.includes(d)){S.days.push(d)}S.testRun=0;const si=sgOf(days().length),d2=pick(DU),gold=Math.random()<.12;if(gold)S.gold=(S.gold||0)+1;save();dr();
+  $('ot').innerHTML=(si>pre?'<p>🎉 Your companion transformed into: '+SG[si][1]+'!</p>':'')+'<div class="rw"><div class="a">'+d2[0]+'</div><div>'+d2[1]+'</div><p style="color:var(--ac);margin:8px 0 0">'+(gold?'🌟 Rare golden dawn flower! ':'')+'Now: wudu → Fajr prayer 🌙</p><p class="note" style="margin:6px 0 0">💡 '+pick(TP)+'</p></div><button id="cl">جزاك الله خيرا • Jazakallah khair</button>';
+  $('cl').onclick=()=>{$('ov').classList.remove('on');ringing=false;if(si>pre){scrollTo({top:0,behavior:'smooth'});evo={s:performance.now(),f:pre,t:si,b:0}}scn='auto';[...$('ch').children].forEach((c,i)=>c.classList.toggle('on',!i));ui()}};
+ spawn()}
+['fr','to','ms'].forEach(k=>{if(S[k])$(k).value=S[k];$(k).addEventListener('change',()=>{S[k]=$(k).value;save()})});
+const TOUR=[['#hero','A gift for you 🦋','This is your little companion. It starts as a sleepy egg, hatches into a butterfly after your first Fajr, then keeps transforming into new cute friends. Tap it now!'],['#tcard','Tonight','Your Fajr time is worked out from where you are. Nothing to type.'],['#gn','Good night','When you get into bed, press this once. I count your sleep in 90-minute cycles and wake you at the lightest moment before Fajr.'],['#mcard','Music','Pick a mood, or leave it on Auto so it follows the sky. Touch the sky anywhere to play your own notes.'],['#gcard','Garden','Every Fajr adds a flower. If you miss one day your streak waits for you, and your total never resets.'],['#tn','Before you sleep','Keep this tab open, plug in the Mac, turn automatic sleep off and raise the volume. Press the 1-minute test once so you know it works.']];
+let ti=-1;function tour(i){document.querySelectorAll('.hl').forEach(e=>e.classList.remove('hl'));if(i<0||i>=TOUR.length){$('tr').classList.remove('on');S.tour=1;save();ti=-1;return}ti=i;const[q,h,t]=TOUR[i],el=document.querySelector(q);el.classList.add('hl');el.scrollIntoView({behavior:'smooth',block:'center'});$('th').textContent=h;$('tt').textContent=t;$('tdt').textContent=(i+1)+' / '+TOUR.length;$('tb').style.visibility=i?'visible':'hidden';$('tn2').textContent=i===TOUR.length-1?'Done ✓':'Next';$('tr').classList.add('on')}
+$('hw').onclick=()=>tour(0);$('tn2').onclick=()=>tour(ti+1);$('tb').onclick=()=>tour(ti-1);$('tk2').onclick=()=>tour(-1);
+pc.addEventListener('pointerdown',()=>{if(ti===0)$('tt').textContent='She likes you! 🤍 Now press Next.'});
+addEventListener('pointerdown',e=>{if(ti===3&&!e.target.closest('button,#tr,input,textarea'))$('tt').textContent='Beautiful ✨ Press Next.'});
+$('ts').onclick=async()=>{ctx();stopMus();$('pm').textContent='▶ Play';S.wake=Date.now()+6e4;S.armed=1;S.testRun=1;save();safety();showNight({wake:new Date(S.wake),f:nextFajr(),hrs:0,k:0});$('ns').textContent='Test: the alarm rings in 1 minute. Try switching to another tab!';try{if(navigator.wakeLock)wl=await navigator.wakeLock.request('screen')}catch(e){}};
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){if(ac)ac.resume();tk()}});
+const dn=()=>{const nm=$('to').value.trim();$('dn').textContent='Dear '+(nm||'friend')+',';$('gt').textContent='a Fajr gift for '+(nm||'you')+' 🌙'};$('to').addEventListener('input',dn);dn();
+function mkfx(c,w,h,k){const B=Array.from({length:k*3},()=>({x:Math.random()*w,y:Math.random()*h,r:4+Math.random()*14,v:.2+Math.random()*.6,p:Math.random()*6})),Sp=Array.from({length:k*4},()=>({x:Math.random()*w,y:Math.random()*h,s:2+Math.random()*5,p:Math.random()*6})),Bf=Array.from({length:k},()=>({y:Math.random()*h*.8,x:Math.random()*w,v:.5+Math.random()*.8,p:Math.random()*6,c:pick(['#ffb3d1','#ffd166','#8ad7ff','#c8b8ff','#ffa970'])})),Pe=Array.from({length:k*2},()=>({x:Math.random()*w,y:Math.random()*h,v:.4+Math.random()*.6,a:Math.random()*6}));
+ return(ts,w,h)=>{B.forEach(b=>{b.y-=b.v;b.x+=Math.sin(ts/900+b.p)*.4;if(b.y<-20){b.y=h+20;b.x=Math.random()*w}c.strokeStyle='rgba(255,255,255,.45)';c.fillStyle='rgba(180,220,255,.08)';c.lineWidth=1.5;c.beginPath();c.arc(b.x,b.y,b.r,0,7);c.fill();c.stroke();c.strokeStyle='rgba(255,255,255,.8)';c.beginPath();c.arc(b.x,b.y,b.r*.65,3.6,4.5);c.stroke()});
+ Sp.forEach(s=>{const a=.5+.5*Math.sin(ts/300+s.p),z=a*s.s/4+.2;c.fillStyle=`rgba(255,240,200,${a})`;c.save();c.translate(s.x,s.y);c.scale(z,z);c.beginPath();c.moveTo(0,-6);c.quadraticCurveTo(0,0,6,0);c.quadraticCurveTo(0,0,0,6);c.quadraticCurveTo(0,0,-6,0);c.quadraticCurveTo(0,0,0,-6);c.fill();c.restore()});
+ Bf.forEach(f=>{f.x+=f.v;if(f.x>w+30){f.x=-30;f.y=Math.random()*h*.8}const y=f.y+Math.sin(ts/500+f.p)*24,fl=.3+.7*Math.abs(Math.sin(ts/110+f.p));c.save();c.translate(f.x,y);c.fillStyle=f.c;c.shadowColor=f.c;c.shadowBlur=10;[-1,1].forEach(s=>{c.beginPath();c.ellipse(s*7*fl,-3,8*fl+1,10,s*.4,0,7);c.fill();c.beginPath();c.ellipse(s*5*fl,6,5*fl+1,6,-s*.3,0,7);c.fill()});c.shadowBlur=0;c.fillStyle='#3a2742';c.fillRect(-1.2,-8,2.4,16);c.restore()});
+ Pe.forEach(q=>{q.y+=q.v;q.x+=Math.sin(ts/1200+q.a)*.6;if(q.y>h+10){q.y=-10;q.x=Math.random()*w}c.fillStyle='rgba(255,170,200,.7)';c.save();c.translate(q.x,q.y);c.rotate(ts/700+q.a);c.beginPath();c.ellipse(0,0,6,3,0,0,7);c.fill();c.restore()})}}
+const lc=$('lc'),lx=lc.getContext('2d');let LW,LH;const lrs=()=>{LW=lc.width=innerWidth;LH=lc.height=innerHeight};lrs();addEventListener('resize',lrs);
+const fxL=mkfx(lx,LW,LH,6),fxM=mkfx(x,innerWidth,innerHeight,2);let lty=null;
+function openL(){$('lt').style.display='flex';requestAnimationFrame(()=>$('lt').classList.remove('off'));$('env').classList.remove('open');$('paper').classList.remove('show');$('pt').textContent='';$('lh').style.opacity=1;$('lb').style.display='none';clearInterval(lty)}
+$('env').onclick=()=>{ctx();if(!mus&&out.gain.value<.5)out.gain.value=.8;const t=ac.currentTime;[0,2,4,7].forEach((d,i)=>bell(nf(SCN.garden,d,1),t+i*.18,.1));$('env').classList.add('open');$('lh').style.opacity=0;
+ setTimeout(()=>{$('paper').classList.add('show');const L=['Assalamu alaikum '+($('to').value.trim()||'Hadiya')+',','','I made you a little Fajr companion.','It wakes you gently with soft music, and a little friend grows with every morning you rise for Fajr.','','May Allah fill your mornings with light.','— '+($('fr').value.trim()||'Mustakim')+' 🦋'].join('\n');let i=0;clearInterval(lty);lty=setInterval(()=>{$('pt').textContent=L.slice(0,++i);if(i>=L.length){clearInterval(lty);$('lb').style.display='block'}},38)},800)};
+$('lb').onclick=()=>{$('lt').classList.add('off');setTimeout(()=>$('lt').style.display='none',900);S.letter=1;save();if(!S.tour)setTimeout(()=>tour(0),900)};
+$('rl').onclick=openL;if(S.letter)$('lt').style.display='none';
+(function ll(ts){requestAnimationFrame(ll);if($('lt').style.display==='none')return;lx.clearRect(0,0,LW,LH);fxL(ts,LW,LH)})(0);
+
+addEventListener('resize',rs);rs();dr();ui();tk();requestAnimationFrame(draw);requestAnimationFrame(pframe);say(days().length?'Good morning! صبح بخیر':'Tap me! I hatch after your first Fajr 🥚');
+</script></body></html>
